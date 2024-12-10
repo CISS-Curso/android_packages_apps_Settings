@@ -2856,7 +2856,7 @@
     <!-- Display settings screen, deactivation button action for sunset-to-sunrise schedule [CHAR LIMIT=40] -->
     <string name="dark_ui_activation_off_auto">Turn off until sunset</string>
     <!-- Dark UI screen, setting option name to enable Dark UI [CHAR LIMIT=30] -->
-    <string name="dark_ui_title">Modo Oscuro CISS</string>
+    <string name="dark_ui_title">El lado oscuro</string>
     <!-- Dark UI screen, setting option name to configure whether Dark UI turn on/off automatically. [CHAR LIMIT=30] -->
     <string name="dark_ui_auto_mode_title">Schedule</string>
     <!-- Dark UI screen, setting option value for Dark UI to *never* turn on/off automatically. [CHAR LIMIT=30] -->
