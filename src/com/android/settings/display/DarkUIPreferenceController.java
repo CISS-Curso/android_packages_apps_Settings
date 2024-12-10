@@ -57,6 +57,7 @@ public class DarkUIPreferenceController extends TogglePreferenceController imple
         super(context, key);
         mUiModeManager = context.getSystemService(UiModeManager.class);
         mPowerManager = context.getSystemService(PowerManager.class);
+        mUiModeManager.setNightModeActivated(true);
     }
 
     @Override
