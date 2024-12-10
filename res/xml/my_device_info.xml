@@ -104,16 +104,15 @@
             settings:isPreferenceVisible="@bool/config_show_sim_info"
             settings:controller="com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController"/>
 
-        <!-- Model & hardware -->
+
+        <!-- Android version -->
         <Preference
-            android:key="device_model"
+            android:key="firmware_version"
             android:order="30"
-            android:title="@string/model_info"
+            android:title="@string/firmware_version"
             android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
-            settings:enableCopying="true"
-            settings:keywords="@string/keywords_model_and_hardware"
-            settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
+            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
+            settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
 
         <!-- EID -->
         <com.android.settingslib.CustomDialogPreferenceCompat
@@ -137,15 +136,17 @@
             settings:isPreferenceVisible="@bool/config_show_sim_info"
             settings:controller="com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController"/>
 
-        <!-- Android version -->
+        <!-- Model & hardware -->
         <Preference
-            android:key="firmware_version"
+            android:key="device_model"
             android:order="42"
-            android:title="@string/firmware_version"
+            android:title="@string/model_info"
             android:summary="@string/summary_placeholder"
-            android:fragment="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings"
-            settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionPreferenceController"/>
-
+            android:fragment="com.android.settings.deviceinfo.hardwareinfo.HardwareInfoFragment"
+            settings:enableCopying="true"
+            settings:keywords="@string/keywords_model_and_hardware"
+            settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
+        
         <!-- Battery information -->
         <Preference
             android:key="battery_info"
