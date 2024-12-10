@@ -146,7 +146,7 @@
             settings:enableCopying="true"
             settings:keywords="@string/keywords_model_and_hardware"
             settings:controller="com.android.settings.deviceinfo.HardwareInfoPreferenceController"/>
-        
+
         <!-- Battery information -->
         <Preference
             android:key="battery_info"
