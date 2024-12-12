@@ -50,17 +50,20 @@ public class ResetImeiPreferenceController extends BasePreferenceController {
     @Override
     public boolean handlePreferenceTreeClick(Preference preference) {
         if (preference.getKey().equals(getPreferenceKey())) {
-            String newImei = generateImei();
-            SystemProperties.set("ro.random_imei", newImei);
-            Log.d(TAG, "Generated new IMEI: " + newImei);
-            preference.setSummary(mContext.getString(R.string.reset_imei_summary, newImei));
+            String newImei1 = generateImei();
+            String newImei2 = generateImei();
+            SystemProperties.set("persist.debug.random_imei_1", newImei1);
+            SystemProperties.set("persist.debug.random_imei_2", newImei2);
+            preference.setSummary(mContext.getString(R.string.reset_imei_summary, newImei1 + "-" + newImei2));
             return true;
         }
         return false;
     }
 
     private String getCurrentImei() {
-        return SystemProperties.get("ro.random_imei", "Not Set");
+        String imei1 = SystemProperties.get("persist.debug.random_imei_1", "Not Set");
+        String imei2 = SystemProperties.get("persist.debug.random_imei_2", "Not Set");
+        return imei1 + imei2;
     }
 
     private String generateImei() {
